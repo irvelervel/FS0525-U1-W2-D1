@@ -45,7 +45,7 @@ numberOfFireworks = 99
 
 // è anche possibile CREARE una variabile e ASSEGNARLE un valore in un colpo solo
 let teacher = 'Stefano' // la variabile teacher NASCE con il valore di 'Stefano'
-teacher = 'Giuseppino'
+teacher = 'Giuseppino' // le riassegno un nuovo valore, "Giuseppino"
 
 // QUALI TIPI DI DATO ESISTONO IN JS? (TIPI PRIMITIVI)
 // string -> 'Stefano', 'Fido', '', 'Impariamo JS!'
@@ -63,3 +63,68 @@ myFavouriteNumber = 12
 // questa variabile è nata inizialmente per ospitare un TIPO di dato numerico
 // buona prassi sarebbe assegnarle sempre valori NUMERICI
 console.log('VALORE DI MYFAVNUMBER', myFavouriteNumber)
+
+// se utilizzate righe separate per la creazione e l'assegnazione del valore
+// ad una variabile, ricordatevi che non si può accedere ad una variabile PRIMA
+// di averla inizializzata!
+let favouriteColor
+favouriteColor = 'green'
+
+// QUESTE DUE RIGHE DANNO ERRORE!
+// anotherColor = 'red'
+// let anotherColor
+
+// OPERATORI MATEMATICI
+// + - * /
+let n1 = 8
+let n2 = 3 + 2 // 5
+
+let s1 = n1 + n2 // 13
+console.log('il valore di s1 è', s1)
+
+let n3 = 12.5
+let n4 = 4.6
+let s2 = n3 - n4 // 7.9
+
+let n5 = 5 * 4 // 20
+let n6 = n5 / 5 // 4
+
+// OPERATORE MODULO (%)
+// il modulo è detto anche RESTO DELLA DIVISIONE
+let n7 = 20 % 6 // 2
+console.log('ESEMPIO MODULO', n7)
+
+// CONCATENAZIONE STRINGHE
+let str1 = 'Ciao'
+let str2 = 'Stefano'
+let res1 = str1 + str2
+console.log('RES1', res1) // 'CiaoStefano'
+
+let str3 = 'Buongiorno'
+let str4 = 'Ragazzi'
+let res2 = str3 + ' ' + str4
+console.log('RES2', res2) // 'Buongiorno Ragazzi'
+
+// OPERATORI LOGICI
+// < > <= >= ! === !==
+let log1 = 7 < 8 // true
+let log2 = 15 > 22 // false
+let log3 = 3 < 3 // false
+let log4 = 3 <= 3 // true
+let log5 = !log4 // l'inverso di log4, false
+let log6 = 14 === 14 // si legge "14 uguale a 14" -> true
+let log7 = 16 !== 23 // si legge "16 diverso da 23" -> true
+
+let log8 = 14 === '14' // false, l'operatore === compara SIA il valore SIA il tipo
+// warning: esiste anche il == che controlla solo il valore e non il tipo,
+// ma... fate finta che non esista! :)
+// let log9 = 14 == '14' // true
+
+let bossFinale1 = '14' + '16' // '1416', NON 30!!!
+let bossFinale2 = 14 + '16' // '1416', NON 30!!!
+// la somma funziona solamente se tutti gli addendi sono numeri!
+
+console.log(14 === 7 + 7)
+
+let bossFinale3 = 15 + undefined
+console.log('numero + undefined fa:', bossFinale3)
