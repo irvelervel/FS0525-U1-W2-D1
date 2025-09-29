@@ -105,7 +105,7 @@ let str4 = 'Ragazzi'
 let res2 = str3 + ' ' + str4
 console.log('RES2', res2) // 'Buongiorno Ragazzi'
 
-// OPERATORI LOGICI
+// OPERATORI DI COMPARAZIONE
 // < > <= >= ! === !==
 let log1 = 7 < 8 // true
 let log2 = 15 > 22 // false
@@ -128,3 +128,62 @@ console.log(14 === 7 + 7)
 
 let bossFinale3 = 15 + undefined
 console.log('numero + undefined fa:', bossFinale3)
+
+// torniamo alla dichiarazione di variabili...
+let myName = 'Stefano'
+const webAddress = 'www.epicode.com'
+// webAddress = 'www.google.com' // ERRORE!!!
+// le variabili definite con LET permettono la loro ri-assegnazione ad un nuovo valore
+// le variabili definite con CONST non lo permettono! in italiano si definiscono "costanti"
+
+// var
+// var era una vecchia parola chiave per la dichiarazione di variabili
+// non si usa più e oggi si utilizzano SOLAMENTE let e const!
+// var aveva un problema: creava variabili con visibilità di FUNZIONE e non di BLOCCO
+// favouriteCat = 'Tom'
+// var favouriteCat
+// imparare a programmare così non serve a niente :(
+
+// OPERATORI LOGICI (AND, OR)
+let result1 = 15 > 10 // true
+let result2 = 13 !== 25 // true
+
+// ...però nella vita reale spesso abbiamo PIÙ circostanze/situazioni da verificare
+// ed eventualmente combinare insieme
+
+// ci sono situazioni in cui TUTTE le verifiche devono dare esito positivo
+let vadoAlMare
+// vado al mare solamente se è bel tempo e se ho finito i compiti
+let belTempo = true
+let finitoICompiti = true
+
+vadoAlMare = belTempo && finitoICompiti
+
+// SPECCHIETTO AND &&
+// true && true -> true
+// false && true -> false
+// true && false -> false
+// false && false -> false
+
+let finalResult1 = 14 <= 13 && 12 > 15 // false && false -> false
+let finalResult2 = 13 <= 13 && 10 > 5 // true && true -> true
+let finalResult3 = 10 === 10 && 34 < 5 // true && false -> false
+
+// OR ||
+// l'or comanda quelle situazioni in cui su diverse condizioni basta che UNA sia
+// vera per provocare un risultato di true
+let vadoABallare
+// vado a ballare se mia mamma mi ha lasciato l'auto o se Giangiorgio mi passa a prendere
+let macchinaDellaMamma = false
+let gianMiPassaAPrendere = true
+
+vadoABallare = macchinaDellaMamma || gianMiPassaAPrendere
+
+// SPECCHIETTO OR ||
+// true || true -> true
+// false || true -> true
+// true || false -> true
+// false || false -> false
+
+let finalResult4 = 15 > 15 || true // false || true -> true
+let finalResult5 = 16 % 2 === 0 || 12 < 10 // true || false -> true
